@@ -3,8 +3,8 @@ package auth
 
 import (
 	v1 "gohub/app/http/controllers/api/v1"
+	"gohub/app/http/requests"
 	"gohub/app/models/user"
-	"gohub/app/requests"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
