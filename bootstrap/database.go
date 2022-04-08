@@ -3,7 +3,6 @@ package bootstrap
 import (
 	"errors"
 	"fmt"
-	"gohub/app/models/user"
 	"gohub/pkg/config"
 	"gohub/pkg/database"
 	"gohub/pkg/logger"
@@ -51,8 +50,8 @@ func SetupDB() {
 	database.SQLDB.SetConnMaxLifetime(time.Duration(config.GetInt("database.mysql.max_life_seconds")) * time.Second)
 
 	// Gorm 支持自动迁移
-	err := database.DB.AutoMigrate(&user.User{})
-	if err != nil {
-		return
-	}
+	//err := database.DB.AutoMigrate(&user.User{})
+	//if err != nil {
+	//	return
+	//}
 }
